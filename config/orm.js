@@ -12,7 +12,6 @@ function printQuestionMarks(num) {
     return arr.toString();
   }
   
-  // Helper function to convert object key/value pairs to SQL syntax
   function objToSql(ob) {
     const arr = [];
   
@@ -39,7 +38,7 @@ function printQuestionMarks(num) {
         cb(result);
       });
     },
-    createOne: function(table, cols, vals, cb) {
+    insertOne: function(table, cols, vals, cb) {
       let queryString = 'INSERT INTO ' + table;
   
       queryString += ' (';
