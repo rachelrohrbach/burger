@@ -11,17 +11,18 @@ function printQuestionMarks(num) {
   
     return arr.toString();
   }
-  
+
   function objToSql(ob) {
     const arr = [];
   
     for (const key in ob) {
       const value = ob[key];
       if (Object.hasOwnProperty.call(ob, key)) {
-        if (typeof value === 'string' && value.indexOf(' ') >= 0) {
+        if (typeof value === "string" && value.indexOf(" ") >= 0) {
           value = "'" + value + "'";
         }
-        arr.push(key + '=' + value);
+  
+        arr.push(key + "=" + value);
       }
     }
   
@@ -39,14 +40,14 @@ function printQuestionMarks(num) {
       });
     },
     insertOne: function(table, cols, vals, cb) {
-      let queryString = 'INSERT INTO ' + table;
+      let queryString = "INSERT INTO " + table;
   
-      queryString += ' (';
+      queryString += " (";
       queryString += cols.toString();
-      queryString += ') ';
-      queryString += 'VALUES (';
+      queryString += ") ";
+      queryString += "VALUES (";
       queryString += printQuestionMarks(vals.length);
-      queryString += ') ';
+      queryString += ") ";
   
       console.log(queryString);
   
