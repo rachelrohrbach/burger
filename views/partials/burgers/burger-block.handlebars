@@ -1,5 +1,11 @@
-{{burger_name}}
 
-<button class='change-burger-state' data-id='{{this.id}}' data-devoured='{{devoured}}'>
-            {{#if devoured}}Devour it!{{else}}Make it Again!{{/if}} </button>
 
+
+
+<div class="card" id="burger-card" style="width: 18rem;">
+  <div class="card-body text-center">
+    <h5 class="card-title">{{burger_name}}</h5>
+    <button class='change-burger-state btn btn-danger' data-id='{{this.id}}' data-devoured='{{devoured}}'>
+            {{#if devoured}}Make it Again!{{else}}Devour it!{{/if}} </button>
+  </div>
+</div>
