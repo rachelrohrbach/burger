@@ -1,0 +1,30 @@
+body {
+  color: #161a1d;
+  font-family: Verdana, Tahoma, sans-serif;
+  margin: 5px;
+  background-color: #98fb98;
+}
+
+#burger-card {
+  background-color: #ffd700;
+  align-content: center;
+  justify-content: center;
+}
+
+
+.burger-list {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+
+ul {
+  font-size: xx-large;
+  font-weight: 500;
+}
+
+.burgers {
+  background-color: #98FB98;
+}
+
+
