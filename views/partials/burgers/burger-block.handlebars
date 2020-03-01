@@ -1,10 +1,6 @@
-
-
-
-
-<div class="card" id="burger-card" style="width: 18rem;">
+<div class="card mx-auto" id="burger-card" style="width: 18rem;">
   <div class="card-body text-center">
-    <h5 class="card-title">{{burger_name}}</h5>
+    <h5 class="card-title">{{burger_name}} <i class="fas fa-hamburger"></i></h5>
     <button class='change-burger-state btn btn-danger' data-id='{{this.id}}' data-devoured='{{devoured}}'>
             {{#if devoured}}Make it Again!{{else}}Devour it!{{/if}} </button>
   </div>

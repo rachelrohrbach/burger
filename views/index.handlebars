@@ -1,0 +1,47 @@
+<div id="burgers">
+    <div class="container text-center mx-auto">
+        <h1 class="mx-auto text-center">Devour the Burgers!</h1>
+        <img src="https://cdn.pixabay.com/photo/2019/02/28/15/38/burger-4026165_960_720.png" alt="burger" width="225px"
+            height="200px">
+        <h4>Add a Burger to the Menu</h4>
+        <form class="create-form text-center mx-auto">
+            <div class="form-group">
+                <input type="text" id="burger-name" name="name">
+            </div>
+            <button type="submit" class="btn btn-danger">Add Burger</button>
+        </form>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 text-center">
+                <div class="burger-list text-center">
+                    <ul>Burger Menu
+                        {{#each burgers}}
+                        {{#unless devoured}}
+                        {{> burgers/burger-block devoured=false}}
+                        {{/unless}}
+                        {{/each}}
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-md-6 mx-auto">
+                <div class="burger-list">
+                    <ul>Devoured Burgers
+                        {{#each burgers}}
+                        {{#if devoured}}
+                        {{> burgers/burger-block devoured=true}}
+                        {{/if}}
+                        {{/each}}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{{!-- <footer class="footer">
+        <p class="text-footer text-center">
+            &copy; Copyright 2020 by Rachel Rohrbach
+        </p>
+    </footer> --}}
