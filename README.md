@@ -32,6 +32,7 @@ This project is created with:
 
 ## Screenshot 
 ![app home screenshot](public/assets/img/screenshot.png)
+Link to deployed heroku app: https://evening-bayou-25102.herokuapp.com/
 
 
 # Credits
