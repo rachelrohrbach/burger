@@ -26,9 +26,9 @@ router.put("/api/burgers/:id", (req, res) => {
   console.log("condition", condition);
   let state;
   if (req.body.devoured === "true") {
-    state = true;
-  } else {
     state = false;
+  } else {
+    state = true;
   }
   burger.updateOne(
     {
